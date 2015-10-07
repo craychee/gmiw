@@ -3,7 +3,7 @@
 settings.php
 
 # Ignore artifacts of Drupal build.
-bin
+bin/*
 !bin/deploy
 vendor
 www
