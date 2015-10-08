@@ -5,15 +5,7 @@ sudo curl https://github.com/pantheon-systems/cli/releases/download/0.8.1/termin
 sudo chmod +x /usr/local/bin/terminus
 
 terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASSWORD
-
-# Clone deployment repository.
-expect <<delim
-  set timeout 60
-  eval spawn git clone $PANTHEON_CODE pantheon
-  expect {password:}
-  send "$PANTHEON_PASSWORD\r\n"
-expect eof
-delim
+git clone $PANTHEON_CODE pantheon
 
 # Set variables
 path=$(dirname "$0")
