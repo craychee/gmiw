@@ -8,7 +8,7 @@ terminus auth login $PANTHEON_EMAIL --password=$PANTHEON_PASSWORD
 
 # Clone deployment repository.
 expect <<delim
-  set timeout 30
+  set timeout 60
   eval spawn git clone $PANTHEON_CODE pantheon
   expect {password:}
   send "$PANTHEON_PASSWORD\r\n"
