@@ -30,5 +30,5 @@ deployment:
       - composer install --no-dev --no-scripts
       - bin/deploy
       - mysqldump -u ubuntu circle_test > pantheon.sql
-      - terminus site clear-caches --site=gosh-michelle-is-witty --env=dev
+      - terminus site clear-cache --site=gosh-michelle-is-witty --env=dev
       - terminus drush sqlc < pantheon.sql --site=gosh-michelle-is-witty --env=dev
