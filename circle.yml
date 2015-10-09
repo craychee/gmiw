@@ -17,6 +17,7 @@ dependencies:
   post:
     - cp env.dist .env
     - source .env
+    - echo $SEEDS
     - sudo chown -R $(whoami):www-data www
     - build/install.sh
 
