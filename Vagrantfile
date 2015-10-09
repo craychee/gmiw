@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.box     = "ubuntu/trusty64"
     config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--memory", 1024]
+        vb.customize ["modifyvm", :id, "--memory", 2048]
     end
 
     path = "/var/www/sites/#{project}.local"
@@ -39,8 +39,9 @@ Vagrant.configure("2") do |config|
 
     config.vm.provision :shell, inline: <<SCRIPT
   if [[ ! -f /vagrant/cnf/settings.php ]]; then
-    cp /#{path}/cnf/local.settings.php /#{path}/cnf/settings.php
+    cp #{path}/cnf/local.settings.php #{path}/cnf/settings.php
   fi
-  su vagrant -c 'cd #{path} && composer install && build/install.sh;'
+  su vagrant -c 'cd #{path} && composer install;
+  cd #{path} && [[ -f .env ]] && source .env || cp env.dist .env && source env.dist && build/install.sh'
 SCRIPT
 end

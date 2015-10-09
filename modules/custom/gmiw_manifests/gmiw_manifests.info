@@ -1,0 +1,8 @@
+name = GMIW's Manifests
+description = Essential content
+package = GMIW
+core = 7.x
+version = 7.x-1.x
+dependencies[] = kw_manifests
+
+files[] = gmiw_manifests_content.inc

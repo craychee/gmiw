@@ -1,0 +1,20 @@
+name = "GMIW Dependencies"
+description = "Base module for the GMIW project"
+package = "GMIW install"
+core = "7.x"
+
+; Contrib
+dependencies[] = admin_menu
+dependencies[] = features
+dependencies[] = entity
+dependencies[] = kw_manifests
+dependencies[] = module_filter
+dependencies[] = strongarm
+dependencies[] = taxonomy
+
+; Custom
+dependencies[] = gmiw_manifests
+
+; Features
+dependencies[] = gmiw_content_type_basic_page
+dependencies[] = gmiw_feature_plain_text

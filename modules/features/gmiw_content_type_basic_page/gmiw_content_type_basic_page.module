@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the gmiw_content_type_basic_page feature.
+ */
+
+include_once 'gmiw_content_type_basic_page.features.inc';

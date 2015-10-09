@@ -9,5 +9,5 @@ chmod -R +w $base/cnf
 echo "Symlink settings.php into our Drupal."
 ln -sf $base/cnf/settings.php $base/www/sites/default/
 echo "Installing Drupal like a boss."
-$drush si --account-pass=admin
+$drush si minimal --account-pass=admin
 source $path/update.sh

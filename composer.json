@@ -34,12 +34,31 @@
                     "drupal/path": "self.version"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/kw-manifests",
+                "type": "drupal-module",
+                "version": "7.3",
+                "source": {
+                    "url": "https://github.com/kraftwagen/kw-manifests.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
     ],
     "require": {
         "pantheon-systems/drops-7": "7.38",
         "craychee/rootcanal": "dev-master",
-        "drupal/features": "~7.2"
+        "drupal/admin_menu": "~7.3@RC",
+        "drupal/entity": "7.*",
+        "drupal/features": "~7.2",
+        "drupal/site_audit": "~7.1",
+        "drupal/strongarm": "7.*",
+        "drupal/kw-manifests": "7.*",
+        "drupal/module_filter": "7.*"
     },
     "require-dev": {
         "drush/drush": "7.*",

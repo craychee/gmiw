@@ -1,0 +1,14 @@
+<?php
+/**
+ * Implements hook_kw_manifests_info().
+ */
+function gmiw_manifests_kw_manifests_info() {
+    $manifests = array();
+
+    $manifests['content_add'] = array(
+            'callback' => 'gmiw_manifests_content_add',
+            'file' => 'gmiw_manifests_content.inc',
+            );
+
+    return $manifests;
+}

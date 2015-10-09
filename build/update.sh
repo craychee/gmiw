@@ -3,7 +3,11 @@ set -e
 path=$(dirname "$0")
 source $path/common.sh
 
-echo "Rebuilding registry and clearing caches.";
+echo "Enabling dependencies.";
+$drush en $(echo $SEEDS | tr ':' ' ')
+echo "Revert features, run manifests, and clearing caches.";
+$drush fra
+$drush kw-m
 $drush cc drush
 echo "Set basic site variables";
 $drush scr $base/build/scripts/set_site_variables.php

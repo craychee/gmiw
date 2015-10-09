@@ -1,0 +1,17 @@
+name = gmiw_content_type_basic_page
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = node
+dependencies[] = strongarm
+dependencies[] = text
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_instance][] = node-basic_page-body
+features[node][] = basic_page
+features[variable][] = field_bundle_settings_node__basic_page
+features[variable][] = node_options_basic_page
+features[variable][] = node_preview_basic_page
+features[variable][] = node_submitted_basic_page
