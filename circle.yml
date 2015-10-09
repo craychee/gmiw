@@ -16,7 +16,7 @@ dependencies:
     - composer install --prefer-dist
   post:
     - cp env.dist .env
-    - source env.dist
+    - source .env
     - sudo chown -R $(whoami):www-data www
     - build/install.sh
 
