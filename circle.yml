@@ -15,6 +15,7 @@ dependencies:
   override:
     - composer install --prefer-dist
   post:
+    - source env.dist
     - sudo chown -R $(whoami):www-data www
     - build/install.sh
 
