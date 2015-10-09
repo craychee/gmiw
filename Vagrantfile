@@ -42,6 +42,6 @@ Vagrant.configure("2") do |config|
     cp #{path}/cnf/local.settings.php #{path}/cnf/settings.php
   fi
   su vagrant -c 'cd #{path} && composer install;
-  cd #{path} && [[ -f .env ]] && source .env || cp env.dist .env && source env.dist && build/install.sh'
+  cd #{path} && build/install.sh'
 SCRIPT
 end

@@ -4,7 +4,7 @@ path=$(dirname "$0")
 source $path/common.sh
 
 echo "Enabling dependencies.";
-$drush en $(echo $SEEDS | tr ':' ' ')
+$drush en $(echo gmiw | tr ':' ' ')
 echo "Revert features, run manifests, and clearing caches.";
 $drush fra
 $drush kw-m
