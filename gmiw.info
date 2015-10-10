@@ -9,6 +9,7 @@ dependencies[] = features
 dependencies[] = entity
 dependencies[] = kw_manifests
 dependencies[] = module_filter
+dependencies[] = pantheon_api
 dependencies[] = strongarm
 dependencies[] = taxonomy
 
