@@ -20,11 +20,11 @@
             "package": {
                 "name": "pantheon-systems/drops-7",
                 "type": "drupal-core",
-                "version": "7.38",
+                "version": "7.4",
                 "source": {
                     "url": "https://github.com/pantheon-systems/drops-7.git",
                     "type": "git",
-                    "reference": "master"
+                    "reference": "composer/update-7.40"
                 },
                 "replace": {
                     "drupal/drupal": "self.version",
@@ -50,7 +50,7 @@
         }
     ],
     "require": {
-        "pantheon-systems/drops-7": "7.38",
+        "pantheon-systems/drops-7": "7.*",
         "craychee/rootcanal": "dev-master",
         "drupal/admin_menu": "~7.3@RC",
         "drupal/entity": "7.*",
