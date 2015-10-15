@@ -24,7 +24,9 @@ test:
 
 deployment:
   pantheon:
-    branch: master
+    branch:
+      - master
+      - feature-drops7.4
     commands:
       - build/install.sh
       - composer install --no-dev --no-scripts
